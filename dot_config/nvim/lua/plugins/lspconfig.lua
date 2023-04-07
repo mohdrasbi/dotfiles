@@ -61,6 +61,7 @@ local servers = {
   'yamlls',
   'dockerls',
   'html',
+  'sourcekit',
 }
 
 for _, lsp in ipairs(servers) do
