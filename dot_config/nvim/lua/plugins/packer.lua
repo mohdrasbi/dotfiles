@@ -44,4 +44,13 @@ return require('packer').startup(function()
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons"
   }
+
+  -- Git diff
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- Markdown preview
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
