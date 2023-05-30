@@ -66,26 +66,41 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-  if lsp == 'sqlls' then
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-        root_dir = ".sql",
-      },
-    }
-
-  else
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-      },
-    }
-  end
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
+  }
 end
+
+nvim_lsp['sqlls'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+    root_dir = ".sql",
+  },
+}
+
+nvim_lsp['pylsp'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
 
 
 -- gopls setup
