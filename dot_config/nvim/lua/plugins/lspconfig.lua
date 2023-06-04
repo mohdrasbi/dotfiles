@@ -95,7 +95,7 @@ nvim_lsp['pylsp'].setup {
       plugins = {
         pycodestyle = {
           ignore = {'W391'},
-          maxLineLength = 100
+          maxLineLength = 150
         }
       }
     }
