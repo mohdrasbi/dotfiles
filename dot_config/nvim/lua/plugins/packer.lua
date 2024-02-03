@@ -54,9 +54,4 @@ return require('packer').startup(function()
       run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use {
-    'https://codeberg.org/esensar/nvim-dev-container',
-    requires = { 'nvim-treesitter/nvim-treesitter' }
-  }
-
 end)
