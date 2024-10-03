@@ -1,0 +1,10 @@
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+autoload -Uz compinit && compinit
+
+export EDITOR=nvim
+export PATH=$HOME/.local/bin:$PATH
+alias python=python3.11
+alias k=kubectl
+
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit

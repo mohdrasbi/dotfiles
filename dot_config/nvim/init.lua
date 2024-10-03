@@ -1,0 +1,13 @@
+require('settings')
+require('keymaps')
+
+require('plugins/packer')
+require('plugins/mason')
+require('plugins/lspconfig')
+require('plugins/nvim-tree')
+require('plugins/treesitter')
+require('plugins/cmp')
+require('plugins/telescope')
+require('plugins/feline')
+require('plugins/monokai')
+require('plugins/trouble')
