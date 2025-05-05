@@ -62,7 +62,7 @@ local servers = {
   'dockerls',
   'html',
   'sourcekit',
-  'bufls',
+  'buf_ls',
 }
 
 for _, lsp in ipairs(servers) do

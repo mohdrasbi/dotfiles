@@ -54,6 +54,14 @@ return require('packer').startup(function()
       run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use 'Exafunction/codeium.vim'
+  use {
+  "kndndrj/nvim-dbee",
+  requires = {
+    "MunifTanjim/nui.nvim",
+  },
+  run = function()
+    require("dbee").install()
+  end,
+}
 
 end)
