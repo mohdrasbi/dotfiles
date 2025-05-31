@@ -1,6 +1,5 @@
 vim.keymap.set("i", "<Esc>", "<Esc>", { desc = "Fix Esc if overridden" })
 
-
 -- Toggle search highlight
 vim.keymap.set("n", "<leader>h", function()
   vim.o.hlsearch = not vim.o.hlsearch
