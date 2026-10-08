@@ -9,14 +9,13 @@ vim.keymap.set("n", "<leader>f", function()
 end, { desc = "Format file with LSP" })
 
 -- Global LSP mappings
+-- Neovim 0.11+ provides defaults: K (hover), grr (references), grn (rename),
+-- gra (code action), gri (implementation), grt (type definition)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover info" })
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
 
 -- Diagnostics mappings
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist, { desc = "Send diagnostics to quickfix" })
 
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true })
-vim.keymap.set('i', 'jj', '<Esc>', { noremap = true })  
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = true })

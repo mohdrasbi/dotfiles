@@ -8,9 +8,9 @@ return {
         auto_trigger = true,
         keymap = {
           accept = "<C-l>",         -- Accept suggestion
-          next = "<C-]>",           -- Next suggestion
-          prev = "<C-[>",           -- Previous suggestion
-          dismiss = "<C-/>",        -- Dismiss suggestion
+          next = "<M-]>",           -- Next suggestion
+          prev = "<M-[>",           -- Previous suggestion
+          dismiss = "<M-e>",        -- Dismiss suggestion
         },
       },
       panel = { enabled = false },
